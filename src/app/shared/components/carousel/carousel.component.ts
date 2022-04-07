@@ -23,7 +23,7 @@ export class CarouselComponent {
   }
   getNext() {
     this.index =
-      this.index === this.products.length
+      this.index === this.products.length - 1
         ? this.index
         : this.index + 1;
   }

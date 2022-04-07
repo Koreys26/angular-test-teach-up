@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
+// Ne fonctionne pas dans le core. Je n'ai pas trouvé pourquoi
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',

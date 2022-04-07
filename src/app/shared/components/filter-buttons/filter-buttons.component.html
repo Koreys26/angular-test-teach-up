@@ -1,5 +1,8 @@
 <mat-chip-list class="filter-buttons" aria-label="Category selection">
-  <mat-chip color="primary" (click)="selectedCategory(category)" *ngFor="let category of categories">{{
-    category.label
-  }}</mat-chip>
+  <mat-chip
+    *ngFor="let category of categories"
+    [ngClass]="{ 'filter-buttons-selected': selectedCategory?._id === category._id}"
+    (click)="setSelectedCategory(category)"
+    >{{ category.label }}</mat-chip
+  >
 </mat-chip-list>

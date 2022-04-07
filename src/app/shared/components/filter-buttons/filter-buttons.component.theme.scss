@@ -1,0 +1,14 @@
+@use '@angular/material' as mat;
+@import '~@angular/material/theming';
+
+@mixin filter-buttons($theme) {
+  $primary: map-get($theme, angular-test-teach-up-primary);
+
+  // Ne marche pas. Je n'ai pas eu le temps de trouver pourquoi.
+  mat-chip-list {
+    .filter-buttons-selected {
+      background-color: $primary;
+    }
+  }
+
+}

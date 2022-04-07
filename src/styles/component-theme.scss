@@ -1,0 +1,6 @@
+@use '@angular/material' as mat;
+@import '../app/shared/components/filter-buttons/filter-buttons.component.theme.scss';
+
+@mixin component-theme($theme) {
+  @include filter-buttons($theme);
+}

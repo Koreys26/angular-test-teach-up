@@ -6,12 +6,19 @@ import { Categories } from 'src/app/core/services/data.model';
   templateUrl: './filter-buttons.component.html',
   styleUrls: ['./filter-buttons.component.scss'],
 })
-export class FilterButtonsComponent {
+export class FilterButtonsComponent implements OnInit {
   @Input() categories: Categories[] = [];
 
   @Output() categorySelected = new EventEmitter<Categories>();
 
-  selectedCategory(category: Categories) {
+  selectedCategory: Categories = {} as any;
+
+  ngOnInit() {
+    this.selectedCategory = this.categories[0];
+  }
+
+  setSelectedCategory(category: Categories) {
+    this.selectedCategory = category;
     this.categorySelected.emit(category);
   }
 }
