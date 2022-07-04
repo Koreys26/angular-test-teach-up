@@ -1,0 +1,14 @@
+<div class="home">
+  <div class="home-filter-buttons">
+    <app-filter-buttons
+      [categories]="data.categories"
+      (categorySelected)="setSelectedCategory($event)"
+    ></app-filter-buttons>
+  </div>
+  <div class="home-carousel">
+    <app-carousel [products]="getCarouselSliders"></app-carousel>
+  </div>
+  <div class="home-list-category">
+    <app-list-category [categories]="getOrderedCategories"></app-list-category>
+  </div>
+</div>
